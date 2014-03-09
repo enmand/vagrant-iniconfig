@@ -14,9 +14,11 @@ module VagrantPlugins
 	module IniConfig
 		class Plugin < Vagrant.plugin('2')
 			name "IniConfig"
-			description "Use Ini configuration files in Vagrant"
+			description <<-DESCRIPTION
+			Use Ini configuration files in Vagrant
+			DESCRIPTION
 
-			config :ini do
+			config(:ini) do
 				require_relative "config"
 				Config
 			end

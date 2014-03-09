@@ -10,6 +10,8 @@ module VagrantPlugins
 			def initialize
 				@file = UNSET_VALUE
 				@config = UNSET_VALUE
+
+				@_finalized = false
 			end
 
 			def file=(file)
@@ -19,7 +21,9 @@ module VagrantPlugins
 
 			def finalize!
 				@file = nil if @file == UNSET_VALUE
-				@config = nil if @config == USSET_VALUE
+				@config = nil if @config == UNSET_VALUE
+
+				@_finalized = true
 			end
 		end
 	end
