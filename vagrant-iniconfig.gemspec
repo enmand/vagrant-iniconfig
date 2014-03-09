@@ -1,16 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vagrant/iniconfig/version'
+
+require 'vagrant-iniconfig/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-iniconfig"
-  spec.version       = Vagrant::Iniconfig::VERSION
+  spec.version       = VagrantPlugin::IniConfig::VERSION
   spec.authors       = ["Daniel Enman"]
   spec.email         = ["enmand@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Use ini-based configuration in your Vagrantfile}
+  spec.summary       = %q{Use ini-based configuration in your Vagrantfile}
+  spec.homepage      = "https://github.com/enmand/vagrant-iniconfig"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
