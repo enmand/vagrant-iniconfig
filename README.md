@@ -1,6 +1,8 @@
 # Vagrant::Iniconfig
 
-TODO: Write a gem description
+Use a INI file to manage your configuration for Vagrant. This might be useful
+if you are using Vagrant in multiple environments, and want to use different
+configuration options for each environment.
 
 ## Installation
 
@@ -15,15 +17,21 @@ And then execute:
 Or install it yourself as:
 
     $ gem install vagrant-iniconfig
+	$ vagrant plugin install pkg/vagrant-iniconfig-0.1.gem
 
 ## Usage
 
-TODO: Write usage instructions here
+In your Vagrantfile, add
 
-## Contributing
+	Vagrant.require_plugin 'vagrant-iniconfig'
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Then in your configuration
+
+	VAGRANTFILE_API_VERSION = "2"
+	Vagrant.config(VAGRANTFILE_API_VERSION) do |config|
+		...
+		config.ini.file = 'path/to/file.ini'
+
+Your INI configurations are then available on
+
+	config.ini.config
