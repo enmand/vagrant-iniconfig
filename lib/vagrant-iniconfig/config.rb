@@ -1,7 +1,7 @@
 require "vagrant"
 require "inifile"
 
-module VagrantPlugin
+module VagrantPlugins
 	module IniConfig
 		class Config < Vagrant.plugin("2", :config)
 			attr_accessor :file

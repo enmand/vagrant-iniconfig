@@ -10,7 +10,7 @@ if Vagrant::VERSION < "1.2.0"
 	raise "Sorry, this plugin only works on Vagrant 1.2.0+"
 end
 
-module VagrantPlugin
+module VagrantPlugins
 	module IniConfig
 		class Plugin < Vagrant.plugin('2')
 			name "IniConfig"

@@ -6,7 +6,7 @@ require 'vagrant-iniconfig/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-iniconfig"
-  spec.version       = VagrantPlugin::IniConfig::VERSION
+  spec.version       = VagrantPlugins::IniConfig::VERSION
   spec.authors       = ["Daniel Enman"]
   spec.email         = ["enmand@gmail.com"]
   spec.description   = %q{Use ini-based configuration in your Vagrantfile}
